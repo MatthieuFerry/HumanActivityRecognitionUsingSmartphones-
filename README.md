@@ -33,11 +33,15 @@ Fisrt I defined several variables relative to the file names and path, so they c
 Loading process
 --------------
 To speed up the loading of training and testing set, I loaded the first rows to look at the columns classes, then I loaded the full datasets.  
+On tricky part is NOT to use " " as a separator, else you'll get a wrong number of records and variables.
 I loaded the subject and activity id for both test and training sets in distinct data frames 
 
 Binding process
 --------------
-I column binded subject ids, activity ids and data for test data on one hand and traingin data on the other hand.  
+Here is a chart created by David Hood, COMMUNITY TA in the course explaining how the different data pieces existing in separate files should be gathered.
+![alt text](HowToBindData.png)  
+
+So I column binded subject ids, activity ids and data for test data on one hand and traingin data on the other hand.  
 Then I row binded the data to have a complete data set with both training and testing data.
 
 Naming the columns

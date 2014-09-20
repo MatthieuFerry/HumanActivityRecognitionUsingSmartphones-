@@ -1,6 +1,7 @@
 # Reading David's project FAQ first is useful : https://class.coursera.org/getdata-007/forum/thread?thread_id=49
 
 # directory structures and file names
+# here I have the UCI HAR Dataset directory under my current working directory
 data_directory  <- "UCI HAR Dataset"
 train_directory <- "train"
 test_directory  <- "test"
