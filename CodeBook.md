@@ -1,65 +1,17 @@
 #  code book that describes the variables, the data, and any transformations or
-#  work that you performed to clean up the data called CodeBook.md
-# Was code book submitted to GitHub that modifies and updates the codebooks
-# available to you with the data to indicate all the variables and summaries you
-# calculated, along with units, and any other relevant information?
+# Variables in the tidy dataset (my_tidy_data_set.txt)
 
-Feature Selection 
-=================
+"Subject.id" : Subject identification number
+"Activity.Name" : Name of the activity if the subject. The possible values are :
+-WALKING
+-WALKING_UPSTAIRS
+-WALKING_DOWNSTAIRS
+-SITTING
+-STANDING
+-LAYING
 
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+All the following variables have been averaged from the original dataset and prefixed by "Mean."
+The original variables name has been tidyed by removing "()" and "-". 
+The original list of variables of each feature vector is available in 'features.txt'
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
-
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
-
-These signals were used to estimate variables of the feature vector for each pattern:  
-'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
-
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
-
-The set of variables that were estimated from these signals are: 
-
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
-
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
-
-gravityMean
-tBodyAccMean
-tBodyAccJerkMean
-tBodyGyroMean
-tBodyGyroJerkMean
-
-The complete list of variables of each feature vector is available in 'features.txt'
+"Mean.tBodyAccMeanX" "Mean.tBodyAccMeanY" "Mean.tBodyAccMeanZ" "Mean.tBodyAccStdX" "Mean.tBodyAccStdY" "Mean.tBodyAccStdZ" "Mean.tGravityAccMeanX" "Mean.tGravityAccMeanY" "Mean.tGravityAccMeanZ" "Mean.tGravityAccStdX" "Mean.tGravityAccStdY" "Mean.tGravityAccStdZ" "Mean.tBodyAccJerkMeanX" "Mean.tBodyAccJerkMeanY" "Mean.tBodyAccJerkMeanZ" "Mean.tBodyAccJerkStdX" "Mean.tBodyAccJerkStdY" "Mean.tBodyAccJerkStdZ" "Mean.tBodyGyroMeanX" "Mean.tBodyGyroMeanY" "Mean.tBodyGyroMeanZ" "Mean.tBodyGyroStdX" "Mean.tBodyGyroStdY" "Mean.tBodyGyroStdZ" "Mean.tBodyGyroJerkMeanX" "Mean.tBodyGyroJerkMeanY" "Mean.tBodyGyroJerkMeanZ" "Mean.tBodyGyroJerkStdX" "Mean.tBodyGyroJerkStdY" "Mean.tBodyGyroJerkStdZ" "Mean.tBodyAccMagMean" "Mean.tBodyAccMagStd" "Mean.tGravityAccMagMean" "Mean.tGravityAccMagStd" "Mean.tBodyAccJerkMagMean" "Mean.tBodyAccJerkMagStd" "Mean.tBodyGyroMagMean" "Mean.tBodyGyroMagStd" "Mean.tBodyGyroJerkMagMean" "Mean.tBodyGyroJerkMagStd" "Mean.fBodyAccMeanX" "Mean.fBodyAccMeanY" "Mean.fBodyAccMeanZ" "Mean.fBodyAccStdX" "Mean.fBodyAccStdY" "Mean.fBodyAccStdZ" "Mean.fBodyAccMeanFreqX" "Mean.fBodyAccMeanFreqY" "Mean.fBodyAccMeanFreqZ" "Mean.fBodyAccJerkMeanX" "Mean.fBodyAccJerkMeanY" "Mean.fBodyAccJerkMeanZ" "Mean.fBodyAccJerkStdX" "Mean.fBodyAccJerkStdY" "Mean.fBodyAccJerkStdZ" "Mean.fBodyAccJerkMeanFreqX" "Mean.fBodyAccJerkMeanFreqY" "Mean.fBodyAccJerkMeanFreqZ" "Mean.fBodyGyroMeanX" "Mean.fBodyGyroMeanY" "Mean.fBodyGyroMeanZ" "Mean.fBodyGyroStdX" "Mean.fBodyGyroStdY" "Mean.fBodyGyroStdZ" "Mean.fBodyGyroMeanFreqX" "Mean.fBodyGyroMeanFreqY" "Mean.fBodyGyroMeanFreqZ" "Mean.fBodyAccMagMean" "Mean.fBodyAccMagStd" "Mean.fBodyAccMagMeanFreq" "Mean.fBodyBodyAccJerkMagMean" "Mean.fBodyBodyAccJerkMagStd" "Mean.fBodyBodyAccJerkMagMeanFreq" "Mean.fBodyBodyGyroMagMean" "Mean.fBodyBodyGyroMagStd" "Mean.fBodyBodyGyroMagMeanFreq" "Mean.fBodyBodyGyroJerkMagMean" "Mean.fBodyBodyGyroJerkMagStd" "Mean.fBodyBodyGyroJerkMagMeanFreq"
