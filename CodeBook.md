@@ -1,4 +1,3 @@
-#  code book that describes the variables, the data, and any transformations or
 # Variables in the tidy dataset (my_tidy_data_set.txt)
 
 "Subject.id" : Subject identification number
